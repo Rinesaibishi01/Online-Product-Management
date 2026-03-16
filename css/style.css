@@ -1,0 +1,418 @@
+/* 1. Rregullat Globale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 2. Header & Navigacioni */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 24px;
+    color: #ff6600;
+}
+/* Slider specifik për faqen About */
+.about-slider {
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), 
+                url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg'); /* Foto e një ekipi/zyre */
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Sigurohu që butoni të jetë i shkurtër dhe profesional siç e diskutuam */
+.about-slider .butoni {
+    display: inline-block;
+    width: auto;
+    padding: 12px 35px;
+    background-color: #ff7000;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.about-slider .butoni:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 112, 0, 0.4);
+}
+/* Slideri i ri në mes të faqes */
+.dynamic-mini-slider {
+    width: 100%;
+    height: 300px; /* Më i shkurtër se banneri nalt */
+    margin: 30px 0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.8s ease-in-out;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('foto1.jpg');
+}
+
+.dynamic-mini-slider h3 { font-size: 30px; text-transform: uppercase; }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* 3. Hero Section / Slider */
+
+.slider {
+    background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)), 
+                url('https://images.pexels.com/photos/114907/pexels-photo-114907.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Kjo i jep një efekt bukur gjatë scroll-it */
+    color: white;
+    padding: 150px 20px; /* E rritëm pak padding-un që fotoja të duket më shumë */
+    text-align: center;
+}
+
+.slider h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px; /* Hapësirë e vogël mes shkronjave */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* I jep thellësi */
+    margin-bottom: 15px;
+}
+
+/* Teksti i vogël poshtë titullit */
+.slider p {
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+    margin-bottom: 40px; /* Hapësirë më e madhe para butonit */
+}
+.slider a {
+    display: inline-block; /* KJO ËSHTË KRYESORJA - e pengon të zgjatet sa ekrani */
+    width: auto; /* Sigurohet që gjerësia të jetë vetëm sa teksti */
+    padding: 15px 40px; /* E bën të trashë dhe me hapësirë anash */
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff7000;
+    border-radius: 30px; /* I rrumbullakos qoshet fiks si pilulë */
+    text-decoration: none;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(255, 112, 0, 0.4); /* Pak hije portokalli */
+}
+
+/* Efekti kur kalon mausin sipër */
+.slider a:hover {
+    background-color: #e66500;
+    transform: translateY(-3px);
+}
+/* 4. Containeri dhe Grid-i i Produkteve */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title { 
+    text-align: center; 
+    margin-bottom: 40px; 
+    font-size: 28px;
+    color: #2c3e50;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #ff6600;
+    display: block;
+    margin: 10px auto;
+}
+
+.produktet {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Madhësi profesionale */
+    gap: 25px;
+}
+
+/* 5. Kartat e Produkteve (Stili i Ri) */
+.karta {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.karta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.karta img {
+    width: 100%;
+    height: 180px; /* Lartësi e kontrolluar */
+    object-fit: contain; /* Nuk e shtyp foton */
+    background: #fdfdfd;
+    padding: 15px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.karta-body {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.karta h3 {
+    font-size: 17px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.karta p {
+    color: #7f8c8d;
+    font-size: 13px;
+    margin-bottom: 15px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.cmimi {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ff6600;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* 6. Butonat */
+.butoni {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.butoni:hover {
+    background-color: #e65c00;
+    box-shadow: 0 4px 12px rgba(230, 92, 0, 0.3);
+}
+
+/* 7. Format (Login & Register) */
+.login-container, .register-container {
+    background: #ffffff;
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eef2f4;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #ff6600;
+}
+
+/* 8. Admin Dashboard Table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.admin-table th, .admin-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* 9. Mesazhet Status */
+.error, .error-msg { background: #fff5f5; color: #c53030; padding: 10px; border-radius: 5px; border: 1px solid #feb2b2; margin-bottom: 15px; text-align: center; }
+.success { background: #f0fff4; color: #276749; padding: 10px; border-radius: 5px; border: 1px solid #9ae6b4; margin-bottom: 15px; text-align: center; }
+
+/* 10. Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 60px;
+}
+.footer-modern {
+    background-color: #2c3e50;
+    color: white;
+    padding: 60px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-box h3 {
+    color: #ff7000;
+    margin-bottom: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.footer-box h3::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: #ff7000;
+    display: block;
+    margin-top: 8px;
+}
+
+.footer-box p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #bdc3c7;
+}
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #ff7000;
+    padding-left: 5px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    background: #34495e;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #ff7000;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #34495e;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #7f8c8d;
+}
+/* 11. Responsive */
+@media (max-width: 768px) {
+    header { flex-direction: column; padding: 20px; }
+    nav { margin-top: 15px; }
+    .slider h2 { font-size: 28px; }
+    .produktet { grid-template-columns: 1fr; }
+}
