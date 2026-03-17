@@ -57,8 +57,7 @@ $produktet = $productObj->lexoProduktet();
                       <div class="karta-body">
                              <h3><?php echo $p['emri']; ?></h3>
                              <span class="cmimi"><?php echo $p['cmimi']; ?> €</span>
-                          <a href="product-details.php?id=<?php echo $p['id']; ?>" class="butoni">Shiko Detajet</a>
-                               </div>
+<a href="product-details.php?id=<?php echo $p['id']; ?>" class="butoni">Shiko Detajet</a>                               </div>
                                </div>
             <?php endforeach; ?>
         <?php else: ?>

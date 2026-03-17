@@ -261,6 +261,134 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+
+
+/* --- Stili për Faqen e Detajeve (GjirafaMall Style) --- */
+
+.details-wrapper {
+    max-width: 1100px;
+    margin: 60px auto;
+    background: #fff;
+    display: flex;
+    padding: 30px;
+    gap: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.details-left {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.details-left img {
+    max-width: 100%;
+    height: auto;
+    transition: 0.4s;
+}
+
+.details-left img:hover {
+    transform: scale(1.03);
+}
+
+.details-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-link {
+    display: block;
+    margin-bottom: 20px;
+    color: #ff7000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.category-tag {
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.price-card {
+    background: #fdfdfd;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #bbb;
+    font-size: 16px;
+}
+
+.new-price {
+    display: block;
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+}
+
+.stock-status {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.product-desc h3 {
+    font-size: 18px;
+    border-bottom: 2px solid #ff7000;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.product-desc p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.add-cart-btn {
+    margin-top: auto;
+    background: #ff7000;
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+    background: #2c3e50;
+    box-shadow: 0 8px 20px rgba(255, 112, 0, 0.2);
+}
+
+/* Responsiviteti për Telefon */
+@media (max-width: 800px) {
+    .details-wrapper {
+        flex-direction: column;
+        margin: 20px;
+    }
+}
 .form-group label {
     display: block;
     margin-bottom: 8px;
@@ -415,4 +543,61 @@ footer {
     nav { margin-top: 15px; }
     .slider h2 { font-size: 28px; }
     .produktet { grid-template-columns: 1fr; }
+}
+@media (max-width: 1024px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .details-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .slider {
+        padding: 100px 20px;
+        background-attachment: scroll;
+    }
+
+    .about-slider {
+        padding: 80px 20px;
+    }
+
+    .dynamic-mini-slider {
+        height: 200px;
+    }
+
+    .produktet {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .details-wrapper {
+        margin: 20px;
+        padding: 20px;
+    }
 }
