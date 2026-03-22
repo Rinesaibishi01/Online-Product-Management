@@ -14,6 +14,7 @@ $produktet = $productObj->lexoProduktet();
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
+    <!-- Shtimi i meta viewport për responsive design w pershtat pajisjen per cilindo ekran te pajisjes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dyqani Teknologjik - Ballina</title>
     <link rel="stylesheet" href="css/style.css">
