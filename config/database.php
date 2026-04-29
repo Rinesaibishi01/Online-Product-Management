@@ -1,35 +1,30 @@
 <?php
 
-class Database{
+class Database {
+    private $host = "localhost";
+    private $db_name = "projekti";
+    private $username = "root";
+    private $password = "";
+    public $conn;
 
-private $host = "localhost";
-private $db_name = "projekti";
-private $username = "root";
-private $password = "";
+    public function lidhja() {
+        $this->conn = null;
 
-public $lidhja;
+        try {
+            // Shtova utf8 që të mos kesh probleme me shkronjat shqipe në DB
+            $this->conn = new PDO(
+                "mysql:host=" . $this->host . ";dbname=" . $this->db_name . ";charset=utf8",
+                $this->username,
+                $this->password
+            );
 
-public function lidhja(){
+           
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            
+        } catch(PDOException $exception) {
+            echo "Gabim në lidhje: " . $exception->getMessage();
+        }
 
-$this->lidhja = null;
-
-try{
-
-$this->lidhja = new PDO(
-"mysql:host=" . $this->host . ";dbname=" . $this->db_name,
-$this->username,
-$this->password
-);
-
-$this->lidhja->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-}
-catch(PDOException $exception){
-echo "Gabim në lidhje: " . $exception->getMessage();
-}
-
-return $this->lidhja;
-
-}
-
+        return $this->conn;
+    }
 }
