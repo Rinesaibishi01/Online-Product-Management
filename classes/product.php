@@ -1,7 +1,7 @@
 <?php
 class Product {
     private $db;
-    private $tabela = "produkte"; // Emri fiks si në phpMyAdmin
+    private $tabela = "produkte"; 
 
     public function __construct($db) {
         $this->db = $db;

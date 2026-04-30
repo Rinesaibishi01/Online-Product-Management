@@ -16,6 +16,7 @@ $produktet = $productObj->lexoProduktet();
     <meta charset="UTF-8">
     <!-- Shtimi i meta viewport për responsive design w pershtat pajisjen per cilindo ekran te pajisjes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Dyqani Teknologjik - Ballina</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -89,13 +90,13 @@ $produktet = $productObj->lexoProduktet();
             </ul>
         </div>
 
-        <div class="footer-box">
-            <h3>Na Kontaktoni</h3>
-            <p>📍 Rruga: "Teknologjia", Prishtinë</p>
-            <p>📞 Tel: +383 44 123 456</p>
-            <p>✉️ Email: info@dyqani.com</p>
-            <p>⏰ Hapur: Mon - Sat (09:00 - 18:00)</p>
-        </div>
+<div class="footer-box">
+    <h3>Na Kontaktoni</h3>
+    <p><i class="fa-solid fa-location-dot"></i> Rruga: "Teknologjia", Prishtinë</p>
+    <p><i class="fa-solid fa-phone"></i> Tel: +383 44 123 456</p>
+    <p><i class="fa-solid fa-envelope"></i> Email: info@dyqani.com</p>
+    <p><i class="fa-solid fa-clock"></i> Hapur: Mon - Sat (09:00 - 18:00)</p>
+</div>
     </div>
     <div class="footer-bottom">
         <p>&copy; 2026 Dyqani Teknologjik. Të gjitha të drejtat e rezervuara.</p>
