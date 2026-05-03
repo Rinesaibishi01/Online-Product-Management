@@ -1,13 +1,13 @@
 <?php
-session_start(); // Fillojmë session-in për ta aksesuar
+session_start(); // Fillojme sesionin per tu bere login
 
-// 1. Fshijmë të gjitha vlerat e session-it
+//  Fshijm vlerat e sesionit
 $_SESSION = array();
 
-// 2. Shkatërrojmë session-in plotësisht
+// Shkaterrojm sesionin
 session_destroy();
 
-// 3. E dërgojmë përdoruesin në balline faqes pas logout-it
+//  E dergojme perdoruesin ne faqen kryesore
 header("Location: index.php");
 exit();
 ?>

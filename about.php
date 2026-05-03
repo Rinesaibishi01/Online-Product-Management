@@ -12,7 +12,7 @@ include('header.php'); ?>
         /* STILIMI I SLIDER-IT SPECIFIK PËR ABOUT */
         .about-slider {
             background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), 
-                        url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg');
+                      url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg');
             background-size: cover;
             background-position: center;
             color: white;

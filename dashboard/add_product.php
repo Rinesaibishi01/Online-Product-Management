@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['roli']) || $_SESSION['roli'] !== 'admin') {
-    header("Location: ../login.php"); // Shto ../ këtu
+    header("Location: ../login.php"); 
     exit();
 }
 
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cmimi = $_POST['cmimi'];
     
     $foto = $_FILES['foto']['name'];
-    $target = "../images/" . basename($foto); // Shto ../ që të shkojë te folderi images jashtë
+    $target = "../images/" . basename($foto); 
 
     if (move_uploaded_file($_FILES['foto']['tmp_name'], $target)) {
         if ($productObj->shtoProdukt($emri, $pershkrimi, $cmimi, $foto)) {

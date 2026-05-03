@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// 1. Siguria: Vetëm admini mund të hyjë
+// siguria qe vetem admini mund te hyje
 if (!isset($_SESSION['roli']) || $_SESSION['roli'] !== 'admin') {
     header("Location: ../login.php");
     exit();
@@ -33,7 +33,6 @@ $produktet = $productObj->lexoProduktet();
     <title>Admin Dashboard - Dyqani Teknologjik</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* Pak stilim shtesë që tabela të duket më mirë */
         .admin-table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; }
         .admin-table th, .admin-table td { padding: 12px; border: 1px solid #ddd; text-align: left; }
         .admin-table th { background-color: #2c3e50; color: white; }
