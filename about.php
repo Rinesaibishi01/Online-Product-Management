@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php session_start();
+include('header.php'); ?>
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -72,24 +73,6 @@
     </style>
 </head>
 <body>
- <header>
-    <h1>Dyqani Teknologjik</h1>
-    <nav>
-        <a href="index.php">Ballina</a>
-        
-        <a href="about.php">Rreth Nesh</a><?php if(isset($_SESSION['roli']) && $_SESSION['roli'] == 'admin'): ?>
-            <a href="dashboard/admin_dashboard.php" style="color: #ff9f43; font-weight: bold;">Admin Dashboard</a>
-        <?php endif; ?>
-
-        <?php if(isset($_SESSION['user_id'])): ?>
-         <a href="logout.php">Dil (<?php echo $_SESSION['emri']; ?>)</a>
-        <?php else: ?>
-            <a href="login.php">Kyçu</a>
-            <a href="register.php">Regjistrohu</a>
-        <?php endif; ?>
-    </nav>
-</header>
-
     <section class="about-slider">
         <div class="slider-content">
             <h1>NJIHUNI ME EKIPIN TONË</h1>
@@ -130,41 +113,7 @@
         </div>
     </div>
 </div>
-<footer class="footer-modern">
-    <div class="footer-container">
-        <div class="footer-box">
-            <h3>Dyqani Teknologjik</h3>
-            <p>Destinacioni juaj i parë për pajisjet më moderne elektronike. Cilësi dhe garanci në çdo blerje.</p>
-            <div class="social-icons">
-                <a href="#">FB</a>
-                <a href="#">IG</a>
-                <a href="#">LN</a>
-            </div>
-        </div>
-
-        <div class="footer-box">
-            <h3>Linke të Shpejta</h3>
-            <ul>
-                <li><a href="index.php">Ballina</a></li>
-                <li><a href="about.php">Rreth Nesh</a></li>
-                <li><a href="index.php#produktet">Produktet</a></li>
-                <li><a href="login.php">Kyçu</a></li>
-            </ul>
-        </div>
-
- <div class="footer-box">
-    <h3>Na Kontaktoni</h3>
-    <p><i class="fa-solid fa-location-dot"></i> Rruga: "Teknologjia", Prishtinë</p>
-    <p><i class="fa-solid fa-phone"></i> Tel: +383 44 123 456</p>
-    <p><i class="fa-solid fa-envelope"></i> Email: info@dyqani.com</p>
-    <p><i class="fa-solid fa-clock"></i> Hapur: Mon - Sat (09:00 - 18:00)</p>
-</div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Dyqani Teknologjik. Të gjitha të drejtat e rezervuara.</p>
-    </div>
-</footer>
-
+<?php include('footer.php');?>
 <script src="js/validation.js"></script>
 </body>
 </html>

@@ -106,7 +106,7 @@ if(isset($_GET['id'])) {
             <p>&copy; 2026 Dyqani Teknologjik. Të gjitha të drejtat e rezervuara.</p>
         </div>
     </footer>
-
+<?php include('footer.php'); ?>
 </body>
 </html>
 
