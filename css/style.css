@@ -225,27 +225,46 @@ nav a:hover {
 }
 
 /* 6. Butonat */
-.butoni {
-    background-color: #ff6600;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
+/* 6. Butonat (Design i ri modern) */
+/* 6. Butonat (BLUE TECH STYLE) */
+/* 6. Butonat (PREMIUM DARK STYLE) */
+/* Butonat më të hollë (slim) */
+.butoni,
+.slider a,
+.add-cart-btn {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: #f9fafb;
+    padding: 10px 18px; /* ⬅️ më i vogël */
+    border: 1px solid rgba(255, 122, 0, 0.25);
+    border-radius: 10px; /* pak më i vogël */
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    width: 100%;
     text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    font-size: 14px; /* ⬅️ më i vogël */
+    letter-spacing: 0.3px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.butoni:hover {
-    background-color: #e65c00;
-    box-shadow: 0 4px 12px rgba(230, 92, 0, 0.3);
+/* Hover */
+.butoni:hover,
+.slider a:hover,
+.add-cart-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #ff7a00, #ff4d00);
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(255, 122, 0, 0.3);
+    border: none;
 }
 
+/* Klik */
+.butoni:active,
+.slider a:active,
+.add-cart-btn:active {
+    transform: scale(0.97);
+}
 /* 7. Format (Login & Register) */
 .login-container, .register-container {
     background: #ffffff;
@@ -341,7 +360,7 @@ nav a:hover {
 }
 
 .stock-status {
-    color: #27ae60;
+    color: #9cae27;
     font-weight: bold;
     font-size: 14px;
     margin-bottom: 20px;
@@ -362,22 +381,31 @@ nav a:hover {
 
 .add-cart-btn {
     margin-top: auto;
-    background: #ff7000;
-    color: white;
-    border: none;
+    background: linear-gradient(135deg, #1f2937, #111827); /* dark elegant */
+    color: #f9fafb;
+    border: 1px solid rgba(255, 165, 0, 0.3); /* subtle accent */
     padding: 18px;
     font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
+    font-weight: 600;
+    border-radius: 12px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+/* Hover */
 .add-cart-btn:hover {
-    background: #2c3e50;
-    box-shadow: 0 8px 20px rgba(255, 112, 0, 0.2);
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #ff7a00, #ff4d00); /* premium highlight */
+    color: #fff;
+    box-shadow: 0 12px 25px rgba(255, 122, 0, 0.35);
+    border: none;
 }
 
+/* Klik */
+.add-cart-btn:active {
+    transform: scale(0.97);
+}
 /* Responsiviteti për Telefon */
 @media (max-width: 800px) {
     .details-wrapper {
