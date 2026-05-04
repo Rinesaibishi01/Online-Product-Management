@@ -225,41 +225,37 @@ nav a:hover {
 }
 
 /* 6. Butonat */
-/* 6. Butonat (Design i ri modern) */
-/* 6. Butonat (BLUE TECH STYLE) */
-/* 6. Butonat (PREMIUM DARK STYLE) */
-/* Butonat më të hollë (slim) */
+
 .butoni,
 .slider a,
 .add-cart-btn {
-    background: linear-gradient(135deg, #1f2937, #111827);
+    background: linear-gradient(135deg, #1f2937, #111827); /* dark elegant */
     color: #f9fafb;
-    padding: 10px 18px; /* ⬅️ më i vogël */
+    padding: 14px 22px;
     border: 1px solid rgba(255, 122, 0, 0.25);
-    border-radius: 10px; /* pak më i vogël */
+    border-radius: 12px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     text-align: center;
     font-weight: 600;
-    font-size: 14px; /* ⬅️ më i vogël */
-    letter-spacing: 0.3px;
-    transition: all 0.25s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
-/* Hover */
+/* Hover efekt */
 .butoni:hover,
 .slider a:hover,
 .add-cart-btn:hover {
-    transform: translateY(-2px);
-    background: linear-gradient(135deg, #ff7a00, #ff4d00);
+    transform: translateY(-4px);
+    background: linear-gradient(135deg, #ff7a00, #ff4d00); /* highlight */
     color: #fff;
-    box-shadow: 0 8px 18px rgba(255, 122, 0, 0.3);
+    box-shadow: 0 12px 25px rgba(255, 122, 0, 0.35);
     border: none;
 }
 
-/* Klik */
+/* Klik efekt */
 .butoni:active,
 .slider a:active,
 .add-cart-btn:active {
