@@ -89,6 +89,8 @@ nav a:hover {
     color: #ff6600;
 }
 
+
+
 /* Hero Section / Slider */
 
 .slider {
@@ -117,6 +119,7 @@ nav a:hover {
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
     margin-bottom: 40px; /* Hapësirë më e madhe para butonit */
 }
+
 .slider a {
     display: inline-block; /* KJO ËSHTË KRYESORJA - e pengon të zgjatet sa ekrani */
     width: auto; /* Sigurohet që gjerësia të jetë vetëm sa teksti */

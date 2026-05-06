@@ -65,29 +65,55 @@
             margin-top: 30px;
             text-align: center;
         }
+        
 
         .stat-box h3 { color: #ff7000; font-size: 35px; margin-bottom: 5px; }
+
+        .features-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 10%;
+    background-color: #fff;
+}
+
+.feature-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid #ff7f00; /* Ngjyra portokalli */
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #2c3e50; /* Bluja e errët */
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
     </style>
 </head>
 <body>
- <header>
-    <h1>Dyqani Teknologjik</h1>
-    <nav>
-        <a href="index.php">Ballina</a>
-        
-        <a href="about.php">Rreth Nesh</a><?php if(isset($_SESSION['roli']) && $_SESSION['roli'] == 'admin'): ?>
-            <a href="dashboard/admin_dashboard.php" style="color: #ff9f43; font-weight: bold;">Admin Dashboard</a>
-        <?php endif; ?>
-
-        <?php if(isset($_SESSION['user_id'])): ?>
-         <a href="logout.php">Dil (<?php echo $_SESSION['emri']; ?>)</a>
-        <?php else: ?>
-            <a href="login.php">Kyçu</a>
-            <a href="register.php">Regjistrohu</a>
-        <?php endif; ?>
-    </nav>
-</header>
-
+ <?php include('header.php'); ?>
     <section class="about-slider">
         <div class="slider-content">
             <h1>NJIHUNI ME EKIPIN TONË</h1>
@@ -119,6 +145,27 @@
             </div>
         </div>
     </div>
+   
+    <!-- Seksioni i Veçorive -->
+<div class="features-section">
+    <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3>Transport i Shpejtë</h3>
+        <p>Dërgesa në shtëpinë tuaj brenda 24 orëve në të gjithë Kosovën.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Garancion 2 Vjeçar</h3>
+        <p>Çdo produkt teknologjik vjen me garancion të plotë nga prodhuesi.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">🎧</div>
+        <h3>Suport Teknik</h3>
+        <p>Ekipi ynë është online çdo ditë për t'ju ndihmuar me çdo paqartësi.</p>
+    </div>
+</div>
 <div class="container" style="margin-bottom: 50px;">
     <h2 style="text-align:center; color:#2c3e50; margin-top:50px;">Eksploro Produktet Tona</h2>
     <div id="dynamic-slider" class="dynamic-mini-slider">

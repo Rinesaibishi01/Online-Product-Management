@@ -152,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="file" name="foto" required>
             </div>
 
-            <button type="submit" class="butoni">🚀 Ruaj Produktin</button>
+            <button type="submit" class="butoni">Ruaj Produktin</button>
             
             <a href="admin_dashboard.php" class="btn-anulo">⬅ Anulo dhe Kthehu</a>
         </form>
