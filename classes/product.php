@@ -30,7 +30,7 @@ class Product {
         }
     }
 
-    // 3. FSHIRJA E PRODUKTIT (Kjo na duhej!)
+    // 3. Fshirja e produktit
     public function fshijProduktin($id) {
         try {
             $query = "DELETE FROM " . $this->tabela . " WHERE id = ?";
@@ -41,7 +41,7 @@ class Product {
         }
     }
 
-    // 4. Marrja e një produkti të vetëm (Nëse të duhet për Edit ose Shiko Detajet)
+    // 4. Marrja e një produkti sipas ID
     public function lexoProduktSipasId($id) {
         try {
             $query = "SELECT * FROM " . $this->tabela . " WHERE id = ?";
@@ -50,6 +50,19 @@ class Product {
             return $stmt->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             return null;
+        }
+    }
+
+    // 5. Përditësimi i produktit (EDIT)
+    public function updateProdukt($id, $emri, $pershkrimi, $cmimi, $foto) {
+        try {
+            $query = "UPDATE " . $this->tabela . " 
+                      SET emri = ?, pershkrimi = ?, cmimi = ?, foto = ? 
+                      WHERE id = ?";
+            $stmt = $this->db->prepare($query);
+            return $stmt->execute([$emri, $pershkrimi, $cmimi, $foto, $id]);
+        } catch (PDOException $e) {
+            return false;
         }
     }
 }

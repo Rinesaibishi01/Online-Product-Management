@@ -31,85 +31,253 @@ $produktet = $productObj->lexoProduktet();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Dyqani Teknologjik</title>
-    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="/css/style.css?v=3">
+
     <style>
+
         .admin-table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; }
         .admin-table th, .admin-table td { padding: 12px; border: 1px solid #ddd; text-align: left; }
         .admin-table th { background-color: #2c3e50; color: white; }
         .btn-delete { background-color: #e74c3c; color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px; }
         .btn-delete:hover { background-color: #c0392b; }
         .section-header { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; }
+
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: white;
+        }
+
+        .admin-table th,
+        .admin-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .admin-table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .btn-delete {
+            background-color: #e74c3c;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn-delete:hover {
+            background-color: #c0392b;
+        }
+
+        .btn-edit {
+            background-color: #3498db;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+
+        .btn-edit:hover {
+            background-color: #2980b9;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+>>>>>>> Stashed changes
     </style>
+
 </head>
+
 <body>
-    <header>
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <h1>Admin Panel</h1>
-            <nav>
-                <a href="../index.php" style="color: white; margin-right: 15px;">Ballina</a>
-                <a href="../logout.php" style="color: #ffaa00; font-weight: bold;">Dil</a>
-            </nav>
-        </div>
-    </header>
 
-    <div class="container">
-        <h2 style="margin-top: 20px;">Menaxhimi i Përdoruesve</h2>
-        <table class="admin-table">
-            <thead>
-                <tr>
-                    <th>Emri</th>
-                    <th>Email</th>
-                    <th>Roli</th>
-                    <th>Veprime</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($perdoruesit as $u): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($u['emri']); ?></td>
-                    <td><?php echo htmlspecialchars($u['email']); ?></td>
-                    <td><strong><?php echo htmlspecialchars($u['roli']); ?></strong></td>
-                    <td>
-                        <a href="delete_user.php?id=<?php echo $u['id']; ?>" class="btn-delete" onclick="return confirm('A jeni të sigurt që doni të fshini këtë përdorues?')">Fshij</a>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+<header>
 
-        <br><hr>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
 
-        <div class="section-header">
-            <h2>Menaxhimi i Produkteve</h2>
-            <a href="add_product.php" class="butoni" style="width: auto; padding: 10px 20px; background-color: #27ae60;">+ Shto Produkt të Ri</a>
-        </div>
-        
-        <table class="admin-table">
-            <thead>
-                <tr>
-                    <th>Foto</th>
-                    <th>Emri i Produktit</th>
-                    <th>Veprime</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if (count($produktet) > 0): ?>
-                    <?php foreach ($produktet as $p): ?>
-                    <tr>
-                        <td>
-                            <img src="../images/<?php echo $p['foto']; ?>" width="60" height="50" style="border-radius: 4px; object-fit: cover;">
-                        </td>
-                        <td><?php echo htmlspecialchars($p['emri']); ?></td>
-                        <td>
-                            <a href="delete_product.php?id=<?php echo $p['id']; ?>" class="btn-delete" onclick="return confirm('A dëshiron ta fshish këtë produkt?')">Fshij Produktin</a>
-                        </td>
-                    </tr>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <tr><td colspan="3" style="text-align:center; padding: 20px;">Nuk ka produkte në databazë.</td></tr>
-                <?php endif; ?>
-            </tbody>
-        </table>
+        <h1>Admin Panel</h1>
+
+        <nav>
+            <a href="../index.php" style="color: white; margin-right: 15px;">Ballina</a>
+
+            <a href="../logout.php" style="color: #ffaa00; font-weight: bold;">
+                Dil
+            </a>
+        </nav>
+
     </div>
+
+</header>
+
+<div class="container">
+
+    <h2 style="margin-top: 20px;">Menaxhimi i Përdoruesve</h2>
+
+    <table class="admin-table">
+
+        <thead>
+
+            <tr>
+                <th>Emri</th>
+                <th>Email</th>
+                <th>Roli</th>
+                <th>Veprime</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <?php foreach ($perdoruesit as $u): ?>
+
+            <tr>
+
+                <td>
+                    <?php echo htmlspecialchars($u['emri']); ?>
+                </td>
+
+                <td>
+                    <?php echo htmlspecialchars($u['email']); ?>
+                </td>
+
+                <td>
+                    <strong>
+                        <?php echo htmlspecialchars($u['roli']); ?>
+                    </strong>
+                </td>
+
+                <td>
+
+                    <!-- EDIT USER -->
+                    <a href="edit_user.php?id=<?php echo $u['id']; ?>" class="btn-edit">
+                        ✏️ Edito
+                    </a>
+
+                    <!-- DELETE USER -->
+                    <a href="delete_user.php?id=<?php echo $u['id']; ?>" 
+                       class="btn-delete"
+                       onclick="return confirm('A jeni të sigurt që doni të fshini këtë përdorues?')">
+
+                        Fshij
+
+                    </a>
+
+                </td>
+
+            </tr>
+
+            <?php endforeach; ?>
+
+        </tbody>
+
+    </table>
+
+    <br><hr>
+
+    <div class="section-header">
+
+        <h2>Menaxhimi i Produkteve</h2>
+
+        <a href="add_product.php" 
+           class="butoni" 
+           style="width: auto; padding: 10px 20px; background-color: #27ae60;">
+
+            + Shto Produkt të Ri
+
+        </a>
+
+    </div>
+
+    <table class="admin-table">
+
+        <thead>
+
+            <tr>
+                <th>Foto</th>
+                <th>Emri i Produktit</th>
+                <th>Veprime</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <?php if (count($produktet) > 0): ?>
+
+                <?php foreach ($produktet as $p): ?>
+
+                <tr>
+
+                    <td>
+
+                        <img 
+                            src="../images/<?php echo $p['foto']; ?>" 
+                            width="60" 
+                            height="50"
+                            style="border-radius: 4px; object-fit: cover;"
+                        >
+
+                    </td>
+
+                    <td>
+                        <?php echo htmlspecialchars($p['emri']); ?>
+                    </td>
+
+                    <td>
+
+                        <!-- EDIT PRODUCT -->
+                        <a href="edit_product.php?id=<?php echo $p['id']; ?>" 
+                           class="btn-edit">
+
+                            ✏️ Edito
+
+                        </a>
+
+                        <!-- DELETE PRODUCT -->
+                        <a href="delete_product.php?id=<?php echo $p['id']; ?>" 
+                           class="btn-delete"
+                           onclick="return confirm('A dëshiron ta fshish këtë produkt?')">
+
+                            Fshij Produktin
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                <?php endforeach; ?>
+
+            <?php else: ?>
+
+                <tr>
+
+                    <td colspan="3" style="text-align:center; padding: 20px;">
+                        Nuk ka produkte në databazë.
+                    </td>
+
+                </tr>
+
+            <?php endif; ?>
+
+        </tbody>
+
+    </table>
+
+</div>
+
 </body>
 </html>

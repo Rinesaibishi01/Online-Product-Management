@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Rreth Nesh - Dyqani Teknologjik</title>
     <link rel="stylesheet" href="css/style.css">
+
     <style>
-        /* STILIMI I SLIDER-IT SPECIFIK PËR ABOUT */
         .about-slider {
             background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), 
                         url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg');
@@ -32,31 +32,16 @@
             text-decoration: none;
             border-radius: 30px;
             font-weight: bold;
-            transition: 0.3s;
         }
 
-        .about-slider .butoni:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 112, 0, 0.4);
-        }
-
-        /* PJESA TJETËR E PËRMBAJTJES */
         .about-content {
             max-width: 900px;
-            margin: -50px auto 40px; /* E ngrejmë pak lart mbi slider */
+            margin: -50px auto 40px;
             background: white;
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.1);
             line-height: 1.8;
-            position: relative; /* Që të dalë mbi slider */
-        }
-        
-        .about-content h2 {
-            color: #ff7000;
-            border-bottom: 2px solid #ff7000;
-            display: inline-block;
-            margin-bottom: 20px;
         }
 
         .stats-container {
@@ -65,117 +50,94 @@
             margin-top: 30px;
             text-align: center;
         }
-        
 
-        .stat-box h3 { color: #ff7000; font-size: 35px; margin-bottom: 5px; }
+        .stat-box h3 {
+            color: #ff7000;
+            font-size: 35px;
+            margin-bottom: 5px;
+        }
 
         .features-section {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 50px 10%;
-    background-color: #fff;
-}
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 50px 10%;
+            background-color: #fff;
+        }
 
-.feature-card {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    flex: 1;
-    min-width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-bottom: 4px solid #ff7f00; /* Ngjyra portokalli */
-}
+        .feature-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            border-bottom: 4px solid #ff7f00;
+        }
 
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.feature-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.feature-card h3 {
-    color: #2c3e50; /* Bluja e errët */
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.feature-card p {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
+
 <body>
- <?php include('header.php'); ?>
-    <section class="about-slider">
-        <div class="slider-content">
-            <h1>NJIHUNI ME EKIPIN TONË</h1>
-            <p>Teknologjia në shërbimin tuaj që nga viti 2024.</p>
-            <a href="#kush-jemi" class="butoni">Eksploro më shumë</a>
+
+<?php include('header.php'); ?>
+
+<section class="about-slider">
+    <h1>NJIHUNI ME EKIPIN TONË</h1>
+    <p>Teknologjia në shërbimin tuaj që nga viti 2024.</p>
+    <a href="#kush-jemi" class="butoni">Eksploro më shumë</a>
+</section>
+
+<div class="about-content" id="kush-jemi">
+    <h2>Kush jemi ne?</h2>
+
+    <p>
+        Dyqani Teknologjik është lider në tregun online për shitjen e pajisjeve elektronike.
+        Misioni ynë është të sjellim teknologjinë më të fundit në duart tuaja me çmimet më konkurruese.
+    </p>
+
+    <div class="stats-container">
+        <div class="stat-box">
+            <h3>500+</h3>
+            <p>Produkte</p>
         </div>
-    </section>
-
-    <div class="about-content" id="kush-jemi">
-        <h2>Kush jemi ne?</h2>
-        <p>
-            Dyqani Teknologjik është lider në tregun online për shitjen e pajisjeve elektronike. 
-            Misioni ynë është të sjellim teknologjinë më të fundit në duart tuaja me çmimet më konkurruese në treg. 
-            Ne besojmë se çdo person meriton akses në mjetet që lehtësojnë jetën dhe punën e përditshme.
-        </p>
-
-        <div class="stats-container">
-            <div class="stat-box">
-                <h3>500+</h3>
-                <p>Produkte</p>
-            </div>
-            <div class="stat-box">
-                <h3>1000+</h3>
-                <p>Klientë</p>
-            </div>
-            <div class="stat-box">
-                <h3>24/7</h3>
-                <p>Mbështetje</p>
-            </div>
+        <div class="stat-box">
+            <h3>1000+</h3>
+            <p>Klientë</p>
+        </div>
+        <div class="stat-box">
+            <h3>24/7</h3>
+            <p>Mbështetje</p>
         </div>
     </div>
-   
-    <!-- Seksioni i Veçorive -->
+</div>
+
 <div class="features-section">
     <div class="feature-card">
         <div class="feature-icon">🚀</div>
         <h3>Transport i Shpejtë</h3>
-        <p>Dërgesa në shtëpinë tuaj brenda 24 orëve në të gjithë Kosovën.</p>
+        <p>Dërgesa brenda 24 orëve në Kosovë.</p>
     </div>
 
     <div class="feature-card">
         <div class="feature-icon">🛡️</div>
-        <h3>Garancion 2 Vjeçar</h3>
-        <p>Çdo produkt teknologjik vjen me garancion të plotë nga prodhuesi.</p>
+        <h3>Garancion</h3>
+        <p>Produktet vijnë me garancion të plotë.</p>
     </div>
 
     <div class="feature-card">
         <div class="feature-icon">🎧</div>
-        <h3>Suport Teknik</h3>
-        <p>Ekipi ynë është online çdo ditë për t'ju ndihmuar me çdo paqartësi.</p>
+        <h3>Suport 24/7</h3>
+        <p>Jemi gjithmonë këtu për ndihmë.</p>
     </div>
 </div>
-<div class="container" style="margin-bottom: 50px;">
-    <h2 style="text-align:center; color:#2c3e50; margin-top:50px;">Eksploro Produktet Tona</h2>
-    <div id="dynamic-slider" class="dynamic-mini-slider">
-        <div class="slider-overlay">
-            <h3 id="slider-title">Duke u ngarkuar...</h3>
-            <p id="slider-text">Ju lutem prisni.</p>
-        </div>
-    </div>
-</div>
+
 <?php include('footer.php'); ?>
-<script src="js/validation.js"></script>
+
 </body>
 </html>

@@ -36,5 +36,29 @@ class Perdoruesi {
             return false; 
         }
     }
-}
+
+    // Merr user sipas ID
+    public function lexoUserSipasId($id) {
+
+        $query = "SELECT * FROM " . $this->tabela . " WHERE id = ?";
+
+        $stmt = $this->db->prepare($query);
+
+        $stmt->execute([$id]);
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    // Update user
+    public function updateUser($id, $emri, $email, $roli) {
+
+        $query = "UPDATE " . $this->tabela . "
+                  SET emri = ?, email = ?, roli = ?
+                  WHERE id = ?";
+
+        $stmt = $this->db->prepare($query);
+
+        return $stmt->execute([$emri, $email, $roli, $id]);
+    }
+} // Kjo kllapë mbyll klasën Perdoruesi
 ?>
