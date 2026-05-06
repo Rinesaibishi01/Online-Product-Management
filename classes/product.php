@@ -7,7 +7,7 @@ class Product {
         $this->db = $db;
     }
 
-    // 1. Leximi i produkteve (Për t'i shfaqur te Ballina dhe Dashboard)
+    //  Leximi i produkteve qe shfaqen ne dashboart
     public function lexoProduktet() {
         try {
             $query = "SELECT * FROM " . $this->tabela . " ORDER BY id DESC";
@@ -19,7 +19,7 @@ class Product {
         }
     }
 
-    // 2. Shtimi i produktit (Për add_product.php)
+    //  Shtimi i produktit 
     public function shtoProdukt($emri, $pershkrimi, $cmimi, $foto) {
         try {
             $query = "INSERT INTO " . $this->tabela . " (emri, pershkrimi, cmimi, foto) VALUES (?, ?, ?, ?)";
@@ -30,7 +30,7 @@ class Product {
         }
     }
 
-    // 3. Fshirja e produktit
+    //  Fshirja e produktit
     public function fshijProduktin($id) {
         try {
             $query = "DELETE FROM " . $this->tabela . " WHERE id = ?";
@@ -41,7 +41,7 @@ class Product {
         }
     }
 
-    // 4. Marrja e një produkti sipas ID
+    //  Marrja e një produkti sipas ID
     public function lexoProduktSipasId($id) {
         try {
             $query = "SELECT * FROM " . $this->tabela . " WHERE id = ?";
@@ -53,7 +53,7 @@ class Product {
         }
     }
 
-    // 5. Përditësimi i produktit (EDIT)
+    // edit te produktit
     public function updateProdukt($id, $emri, $pershkrimi, $cmimi, $foto) {
         try {
             $query = "UPDATE " . $this->tabela . " 

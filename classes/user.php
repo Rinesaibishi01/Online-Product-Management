@@ -14,7 +14,7 @@ class Perdoruesi {
         $stmt->execute([$email]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // Këtu përdorim 'password' sepse ashtu e ke në foto
+
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['emri'] = $user['emri'];
@@ -27,7 +27,7 @@ class Perdoruesi {
     // Metoda për Regjistrim
     public function regjistro($emri, $email, $password) {
         try {
-            // Ndryshuam 'fjalekalimi' në 'password' që të përputhet me databazën tënde
+        
             $sql = "INSERT INTO " . $this->tabela . " (emri, email, password, roli) VALUES (?, ?, ?, 'perdorues')";
             $stmt = $this->db->prepare($sql);
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -37,7 +37,7 @@ class Perdoruesi {
         }
     }
 
-    // Merr user sipas ID
+    // e mer userinsipas id-s
     public function lexoUserSipasId($id) {
 
         $query = "SELECT * FROM " . $this->tabela . " WHERE id = ?";
@@ -48,8 +48,7 @@ class Perdoruesi {
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-
-    // Update user
+       //e ben userin update
     public function updateUser($id, $emri, $email, $roli) {
 
         $query = "UPDATE " . $this->tabela . "
@@ -60,5 +59,5 @@ class Perdoruesi {
 
         return $stmt->execute([$emri, $email, $roli, $id]);
     }
-} // Kjo kllapë mbyll klasën Perdoruesi
+}
 ?>
