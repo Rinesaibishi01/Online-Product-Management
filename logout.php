@@ -1,7 +1,7 @@
 <?php
 session_start(); // Fillojme sesionin per tu bere login
 
-//  Fshijm vlerat e sesionit
+//  Fshin vlerat e sesionit
 $_SESSION = array();
 
 // Shkaterrojm sesionin

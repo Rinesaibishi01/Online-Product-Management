@@ -4,7 +4,7 @@ require_once "config/database.php";
 require_once "classes/Product.php";
 include('header.php'); 
 
-// Lidhja me DB dhe marrja e produkteve
+// Lidhja me Databaze dhe marrja e produkteve
 $database = new Database();
 $db = $database->lidhja();
 $productObj = new Product($db);

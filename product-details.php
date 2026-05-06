@@ -111,7 +111,7 @@ if(isset($_GET['id'])) {
 </html>
 
 <?php 
-// Mbyllja e lidhjes me databaze
+// Mbyllja e lidhjes me databaze.
 $stmt = null;
 $conn = null;
 ?>

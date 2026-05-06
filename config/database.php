@@ -2,7 +2,7 @@
 
 class Database {
     private $host = "localhost";
-    private $db_name = "projekti"; // Emri i databazës tënde
+    private $db_name = "projekti"; 
     private $username = "root";
     private $password = "";
     public $conn;

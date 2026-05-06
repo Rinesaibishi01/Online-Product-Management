@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             z-index: 2;
         }
 
-        /* Butoni rreth për kthim */
+        
         .back-circle {
             position: absolute;
             top: -15px;

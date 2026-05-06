@@ -31,8 +31,6 @@
         <p>&copy; 2026 Dyqani Teknologjik. Të gjitha të drejtat e rezervuara.</p>
     </div>
 </footer>
-
-<!-- Thirrja e skedarit JS ne fund per performance me te mire[cite: 2] -->
 <script src="js/validation.js"></script>
 </body>
 </html>

@@ -21,12 +21,12 @@ if (session_status() === PHP_SESSION_NONE) {
         <a href="index.php">Ballina</a>
         <a href="about.php">Rreth Nesh</a>
         
-        <!-- Shfaqja e Dashboard-it vetem per Adminin[cite: 2] -->
+        <!-- Shfaqja e Dashboard-it vetem per Adminin-->
         <?php if(isset($_SESSION['roli']) && $_SESSION['roli'] == 'admin'): ?>
             <a href="dashboard/admin_dashboard.php" style="color: #ff9f43; font-weight: bold;">Admin Panel</a>
         <?php endif; ?>
 
-        <!-- Kontrolli i sesionit per Kyçje/Dalje[cite: 2] -->
+        <!-- Kontrolli i sesionit per Kyçje -->
         <?php if(isset($_SESSION['user_id'])): ?>
             <a href="logout.php">Dil (<?php echo htmlspecialchars($_SESSION['emri']); ?>)</a>
         <?php else: ?>
