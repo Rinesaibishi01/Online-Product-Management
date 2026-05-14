@@ -7,6 +7,7 @@ if (!isset($_SESSION['roli']) || $_SESSION['roli'] !== 'admin') {
     exit();
 }
 
+
 // 2. Lidhja me Databazën dhe Klasën
 require_once "../config/database.php";
 require_once "../classes/Product.php";
@@ -30,6 +31,7 @@ $produktet = $productObj->lexoProduktet();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/style.css">
     <title>Admin Dashboard - Dyqani Teknologjik</title>
 
     <link rel="stylesheet" href="/css/style.css?v=3">
@@ -105,8 +107,7 @@ $produktet = $productObj->lexoProduktet();
 <body>
 
 <header>
-
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+ <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
 
         <h1>Admin Panel</h1>
 
@@ -118,7 +119,7 @@ $produktet = $productObj->lexoProduktet();
             </a>
         </nav>
 
-    </div>
+    </div>   
 
 </header>
 

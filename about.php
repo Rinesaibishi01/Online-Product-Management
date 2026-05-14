@@ -117,6 +117,17 @@
     </div>
 </div>
 
+<div class="container" style="margin-bottom: 50px;">
+    <h2 style="text-align:center; color:#2c3e50; margin-top:50px;">Eksploro Produktet Tona</h2>
+    <div id="dynamic-slider" class="dynamic-mini-slider">
+        <div class="slider-overlay">
+            <h3 id="slider-title">Duke u ngarkuar...</h3>
+            <p id="slider-text">Ju lutem prisni.</p>
+        </div>
+
+    </div>
+</div>
+
 <div class="features-section">
     <div class="feature-card">
         <div class="feature-icon">🚀</div>
